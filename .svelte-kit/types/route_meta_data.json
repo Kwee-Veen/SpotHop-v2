@@ -1,0 +1,11 @@
+{
+	"/": [],
+	"/create": [],
+	"/login": [],
+	"/logout": [],
+	"/maps": [
+		"src/routes/maps/+page.ts"
+	],
+	"/report": [],
+	"/signup": []
+}
