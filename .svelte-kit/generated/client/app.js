@@ -12,15 +12,15 @@ export const nodes = [
 	() => import('./nodes/8')
 ];
 
-export const server_loads = [];
+export const server_loads = [0];
 
 export const dictionary = {
 		"/": [2],
-		"/create": [3],
-		"/login": [4],
-		"/logout": [5],
-		"/maps": [6],
-		"/report": [7],
+		"/create": [~3],
+		"/login": [~4],
+		"/logout": [~5],
+		"/maps": [~6],
+		"/report": [~7],
 		"/signup": [8]
 	};
 

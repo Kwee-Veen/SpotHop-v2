@@ -52,6 +52,10 @@
   },
   "_index.js": {
     "file": "chunks/index.js",
+    "name": "index"
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
     "name": "index",
     "imports": [
       "_ssr.js"
@@ -64,6 +68,10 @@
       "_ssr.js"
     ]
   },
+  "_spot-service.js": {
+    "file": "chunks/spot-service.js",
+    "name": "spot-service"
+  },
   "_ssr.js": {
     "file": "chunks/ssr.js",
     "name": "ssr"
@@ -72,7 +80,7 @@
     "file": "chunks/stores.js",
     "name": "stores",
     "imports": [
-      "_index.js"
+      "_index2.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
@@ -91,10 +99,17 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
     "isEntry": true,
     "imports": [
+      "_index.js",
       "_internal.js",
       "_exports.js",
-      "_index.js"
+      "_index2.js"
     ]
+  },
+  "src/routes/+layout.server.ts": {
+    "file": "entries/pages/_layout.server.ts.js",
+    "name": "entries/pages/_layout.server.ts",
+    "src": "src/routes/+layout.server.ts",
+    "isEntry": true
   },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
@@ -116,6 +131,15 @@
       "_stores.js"
     ]
   },
+  "src/routes/create/+page.server.ts": {
+    "file": "entries/pages/create/_page.server.ts.js",
+    "name": "entries/pages/create/_page.server.ts",
+    "src": "src/routes/create/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_spot-service.js"
+    ]
+  },
   "src/routes/create/+page.svelte": {
     "file": "entries/pages/create/_page.svelte.js",
     "name": "entries/pages/create/_page.svelte",
@@ -125,8 +149,19 @@
       "_ssr.js",
       "_Card.js",
       "_stores.js",
+      "_client.js",
       "_SpotList.js",
       "_LeafletMap.js"
+    ]
+  },
+  "src/routes/login/+page.server.ts": {
+    "file": "entries/pages/login/_page.server.ts.js",
+    "name": "entries/pages/login/_page.server.ts",
+    "src": "src/routes/login/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_spot-service.js"
     ]
   },
   "src/routes/login/+page.svelte": {
@@ -136,9 +171,14 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_client.js",
       "_UserCredentials.js"
     ]
+  },
+  "src/routes/logout/+page.server.ts": {
+    "file": "entries/pages/logout/_page.server.ts.js",
+    "name": "entries/pages/logout/_page.server.ts",
+    "src": "src/routes/logout/+page.server.ts",
+    "isEntry": true
   },
   "src/routes/logout/+page.svelte": {
     "file": "entries/pages/logout/_page.svelte.js",
@@ -149,6 +189,15 @@
       "_ssr.js",
       "_client.js",
       "_stores.js"
+    ]
+  },
+  "src/routes/maps/+page.server.ts": {
+    "file": "entries/pages/maps/_page.server.ts.js",
+    "name": "entries/pages/maps/_page.server.ts",
+    "src": "src/routes/maps/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_spot-service.js"
     ]
   },
   "src/routes/maps/+page.svelte": {
@@ -168,6 +217,15 @@
     "name": "entries/pages/maps/_page.ts",
     "src": "src/routes/maps/+page.ts",
     "isEntry": true
+  },
+  "src/routes/report/+page.server.ts": {
+    "file": "entries/pages/report/_page.server.ts.js",
+    "name": "entries/pages/report/_page.server.ts",
+    "src": "src/routes/report/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_spot-service.js"
+    ]
   },
   "src/routes/report/+page.svelte": {
     "file": "entries/pages/report/_page.svelte.js",

@@ -1,11 +1,30 @@
 {
-	"/": [],
-	"/create": [],
-	"/login": [],
-	"/logout": [],
-	"/maps": [
-		"src/routes/maps/+page.ts"
+	"/": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
 	],
-	"/report": [],
-	"/signup": []
+	"/create": [
+		"src/routes/create/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/login": [
+		"src/routes/login/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/logout": [
+		"src/routes/logout/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/maps": [
+		"src/routes/maps/+page.ts",
+		"src/routes/maps/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/report": [
+		"src/routes/report/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/signup": [
+		"src/routes/+layout.server.ts"
+	]
 }

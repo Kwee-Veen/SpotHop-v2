@@ -10,13 +10,21 @@ const Menu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $currentSession, $$unsubscribe_currentSession;
   $$unsubscribe_currentSession = subscribe(currentSession, (value) => $currentSession = value);
   $$unsubscribe_currentSession();
-  return `<nav class="navbar is-full-width"><div class="container"><div class="navbar-brand"><a class="navbar-item" href="/create"><span class="icon" data-svelte-h="svelte-1j9bdsx"><i class="fas fa-map-marker-alt"></i></span> <span><strong>Welcome ${escape($currentSession.name)}</strong></span></a></div> <div id="navbarMenu" class="navbar-menu"><div class="navbar-end"><a class="navbar-item" href="/create" data-svelte-h="svelte-p8qpoc">Create Spot</a> <a class="navbar-item" href="/report" data-svelte-h="svelte-1wjcy32">View Reports</a> <a class="navbar-item" href="/maps" data-svelte-h="svelte-12742nq">Maps</a> <a class="navbar-item" href="/logout">Logout ${escape($currentSession.name)}</a></div> <div></div></div></div></nav>`;
+  return `<nav class="navbar is-full-width"><div class="container"><div class="navbar-brand"><a class="navbar-item" href="/create"><span class="icon" data-svelte-h="svelte-1j9bdsx"><i class="fas fa-map-marker-alt"></i></span> <span><strong>Welcome ${escape($currentSession.name)}</strong></span></a></div> <div id="navbarMenu" class="navbar-menu"><div class="navbar-end"><a class="navbar-item" href="/create" data-svelte-h="svelte-p8qpoc">Create Spot</a> <a class="navbar-item" href="/report" data-svelte-h="svelte-1wjcy32">View Reports</a> <a class="navbar-item" href="/maps" data-svelte-h="svelte-12742nq">Maps</a> <a data-sveltekit-preload-data="tap" class="navbar-item" href="/logout">Logout [${escape($currentSession?.name)}]</a></div> <div></div></div></div></nav>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $currentSession, $$unsubscribe_currentSession;
   $$unsubscribe_currentSession = subscribe(currentSession, (value) => $currentSession = value);
+  let { data } = $$props;
+  if (data.session) {
+    currentSession.set(data.session);
+  } else {
+    currentSession.set({ name: "", _id: "", token: "" });
+  }
+  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+    $$bindings.data(data);
   $$unsubscribe_currentSession();
-  return `<div class="container">${$currentSession?.token ? `${validate_component(Menu, "Menu").$$render($$result, {}, {}, {})} ${validate_component(Heading, "Heading").$$render($$result, {}, {}, {})}` : ``} ${slots.default ? slots.default({}) : ``}</div>`;
+  return `<div class="container">${$currentSession.token ? `${validate_component(Menu, "Menu").$$render($$result, {}, {}, {})} ${validate_component(Heading, "Heading").$$render($$result, {}, {}, {})}` : ``} ${slots.default ? slots.default({}) : ``}</div>`;
 });
 export {
   Layout as default

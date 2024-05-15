@@ -16,6 +16,7 @@ const LeafletMap = create_ssr_component(($$result, $$props, $$bindings, slots) =
   L.layerGroup([]);
   L.layerGroup([]);
   L.layerGroup([]);
+  let { data } = $$props;
   function addMarker(lat, lng, popupText) {
     const marker = L.marker([lat, lng]).addTo(imap);
     const popup = L.popup({ autoClose: false, closeOnClick: false });
@@ -37,6 +38,8 @@ const LeafletMap = create_ssr_component(($$result, $$props, $$bindings, slots) =
     $$bindings.minZoom(minZoom);
   if ($$props.activeLayer === void 0 && $$bindings.activeLayer && activeLayer !== void 0)
     $$bindings.activeLayer(activeLayer);
+  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+    $$bindings.data(data);
   if ($$props.addMarker === void 0 && $$bindings.addMarker && addMarker !== void 0)
     $$bindings.addMarker(addMarker);
   if ($$props.moveTo === void 0 && $$bindings.moveTo && moveTo !== void 0)
