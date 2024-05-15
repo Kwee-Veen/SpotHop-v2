@@ -26,6 +26,12 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const COOKIE_NAME: string;
+	export const COOKIE_PASSWORD: string;
+	export const cloudinary_name: string;
+	export const cloudinary_key: string;
+	export const cloudinary_secret: string;
+	export const db: string;
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
@@ -137,6 +143,12 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		COOKIE_NAME: string;
+		COOKIE_PASSWORD: string;
+		cloudinary_name: string;
+		cloudinary_key: string;
+		cloudinary_secret: string;
+		db: string;
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;

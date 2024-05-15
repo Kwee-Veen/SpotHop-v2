@@ -5,13 +5,10 @@ import type { PageServerLoad } from "./$types";
 
 export const ssr = false;
 
-export const load = async ({ parent }: Parameters<PageServerLoad>[0]) => {
-  const { session } = await parent();
-  if (session) {
-    return {
-      spots: await spotService.getSpots(session!),
-    };
-  }
+export const load = async ({}: Parameters<PageServerLoad>[0]) => {
+  return {
+    spots: await spotService.getSpots(),
+  };
 };
 
 export const actions = {
@@ -29,8 +26,17 @@ export const actions = {
           description: form.get("description") as unknown as string,
           userid: session._id
         };
-        spotService.createSpot(spot, session);
+        spotService.createSpot(spot);
       }
     }
+  },
+  delete: async ({ request, cookies }) => {
+    const cookieStr = cookies.get("spot-user") as string;
+    if (cookieStr) {
+      const form = await request.formData();
+      const id = form.get("deleteSpotId") as string;
+      await spotService.deleteSpot(id);
+      console.log("Deleted spot: " + id);
   }
+}
 };

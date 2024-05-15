@@ -66,11 +66,21 @@
     "name": "internal",
     "imports": [
       "_ssr.js"
+    ],
+    "dynamicImports": [
+      "src/hooks.server.ts"
     ]
   },
   "_spot-service.js": {
     "file": "chunks/spot-service.js",
-    "name": "spot-service"
+    "name": "spot-service",
+    "imports": [
+      "_spot.js"
+    ]
+  },
+  "_spot.js": {
+    "file": "chunks/spot.js",
+    "name": "spot"
   },
   "_ssr.js": {
     "file": "chunks/ssr.js",
@@ -104,6 +114,12 @@
       "_exports.js",
       "_index2.js"
     ]
+  },
+  "src/hooks.server.ts": {
+    "file": "chunks/hooks.server.js",
+    "name": "hooks.server",
+    "src": "src/hooks.server.ts",
+    "isDynamicEntry": true
   },
   "src/routes/+layout.server.ts": {
     "file": "entries/pages/_layout.server.ts.js",
@@ -250,6 +266,7 @@
     "imports": [
       "_ssr.js",
       "_UserCredentials.js",
+      "_spot.js",
       "_client.js"
     ]
   }

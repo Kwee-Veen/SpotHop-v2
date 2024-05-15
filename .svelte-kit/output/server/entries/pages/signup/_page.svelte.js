@@ -1,5 +1,6 @@
 import { c as create_ssr_component, d as add_attribute, v as validate_component } from "../../../chunks/ssr.js";
 import { U as UserCredentials } from "../../../chunks/UserCredentials.js";
+import "../../../chunks/spot.js";
 import "../../../chunks/client.js";
 const UserDetails = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { firstName = "" } = $$props;
