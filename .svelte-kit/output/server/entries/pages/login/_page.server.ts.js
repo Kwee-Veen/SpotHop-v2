@@ -1,5 +1,6 @@
-import { D as DEV, r as redirect } from "../../../chunks/index.js";
+import { D as DEV } from "../../../chunks/prod-ssr.js";
 import { s as spotService } from "../../../chunks/spot-service.js";
+import { r as redirect } from "../../../chunks/index.js";
 const dev = DEV;
 const actions = {
   login: async ({ request, cookies }) => {

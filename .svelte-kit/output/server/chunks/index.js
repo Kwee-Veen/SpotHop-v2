@@ -1,4 +1,3 @@
-const DEV = false;
 class HttpError {
   /**
    * @param {number} status
@@ -92,7 +91,6 @@ function text(body, init) {
 }
 export {
   ActionFailure as A,
-  DEV as D,
   HttpError as H,
   Redirect as R,
   SvelteKitError as S,

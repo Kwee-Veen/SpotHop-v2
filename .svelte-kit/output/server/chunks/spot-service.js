@@ -320,24 +320,35 @@ const spotService = {
       return false;
     }
   },
-  /////////////////////////////////////////////////////////
-  // Check this works, especially the id in the HTTP bit //
-  /////////////////////////////////////////////////////////
-  // async deleteSpot(id: String, session: Session) {
-  //   try {
-  //     axios.defaults.headers.common["Authorization"] = "Bearer " + session.token;
-  //     const response = await axios.delete(this.baseUrl + `/api/spots/${id}`);
-  //     return response.status == 200;
-  //   } catch (error) {
-  //     return false;
-  //   }
-  // },
+  async editSpot(oldSpot, newSpot) {
+    try {
+      spotStore.editSpot(oldSpot, newSpot);
+    } catch (error) {
+      return false;
+    }
+  },
+  async deleteSpot(id) {
+    try {
+      await spotStore.deleteSpot(id);
+      return null;
+    } catch (error) {
+      return false;
+    }
+  },
   async getSpots() {
     try {
       const spots = await spotStore.getAllSpots();
       return JSON.parse(JSON.stringify(spots));
     } catch (error) {
       return [];
+    }
+  },
+  async getSpotById(id) {
+    try {
+      const spot = await spotStore.getSpotById(id);
+      return JSON.parse(JSON.stringify(spot));
+    } catch (error) {
+      return null;
     }
   },
   async getUsers() {

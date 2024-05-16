@@ -29,7 +29,8 @@
     "file": "chunks/SpotList.js",
     "name": "SpotList",
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_client.js"
     ]
   },
   "_UserCredentials.js": {
@@ -71,6 +72,10 @@
       "src/hooks.server.ts"
     ]
   },
+  "_prod-ssr.js": {
+    "file": "chunks/prod-ssr.js",
+    "name": "prod-ssr"
+  },
   "_spot-service.js": {
     "file": "chunks/spot-service.js",
     "name": "spot-service",
@@ -109,8 +114,9 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
     "isEntry": true,
     "imports": [
-      "_index.js",
+      "_prod-ssr.js",
       "_internal.js",
+      "_index.js",
       "_exports.js",
       "_index2.js"
     ]
@@ -153,7 +159,8 @@
     "src": "src/routes/create/+page.server.ts",
     "isEntry": true,
     "imports": [
-      "_spot-service.js"
+      "_spot-service.js",
+      "_index.js"
     ]
   },
   "src/routes/create/+page.svelte": {
@@ -170,14 +177,36 @@
       "_LeafletMap.js"
     ]
   },
+  "src/routes/edit/[id]/+page.server.ts": {
+    "file": "entries/pages/edit/_id_/_page.server.ts.js",
+    "name": "entries/pages/edit/_id_/_page.server.ts",
+    "src": "src/routes/edit/[id]/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_spot-service.js",
+      "_index.js"
+    ]
+  },
+  "src/routes/edit/[id]/+page.svelte": {
+    "file": "entries/pages/edit/_id_/_page.svelte.js",
+    "name": "entries/pages/edit/_id_/_page.svelte",
+    "src": "src/routes/edit/[id]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_client.js",
+      "_stores.js"
+    ]
+  },
   "src/routes/login/+page.server.ts": {
     "file": "entries/pages/login/_page.server.ts.js",
     "name": "entries/pages/login/_page.server.ts",
     "src": "src/routes/login/+page.server.ts",
     "isEntry": true,
     "imports": [
-      "_index.js",
-      "_spot-service.js"
+      "_prod-ssr.js",
+      "_spot-service.js",
+      "_index.js"
     ]
   },
   "src/routes/login/+page.svelte": {
@@ -240,7 +269,8 @@
     "src": "src/routes/report/+page.server.ts",
     "isEntry": true,
     "imports": [
-      "_spot-service.js"
+      "_spot-service.js",
+      "_index.js"
     ]
   },
   "src/routes/report/+page.svelte": {
@@ -255,7 +285,7 @@
       "_SpotList.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.CFqkUYVZ.css"
+      "_app/immutable/assets/_page.Cr4CiJpe.css"
     ]
   },
   "src/routes/signup/+page.svelte": {
