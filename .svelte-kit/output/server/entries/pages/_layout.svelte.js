@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as subscribe, e as escape, v as validate_component } from "../../chunks/ssr.js";
+import { c as create_ssr_component, d as subscribe, e as escape, v as validate_component } from "../../chunks/ssr.js";
 import { s as subTitle, c as currentSession } from "../../chunks/stores.js";
 const Heading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $subTitle, $$unsubscribe_subTitle;

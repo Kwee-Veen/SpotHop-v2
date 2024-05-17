@@ -1,13 +1,13 @@
 {
   ".svelte-kit/generated/client-optimized/app.js": {
-    "file": "_app/immutable/entry/app.bTVvAoIj.js",
+    "file": "_app/immutable/entry/app.79rmuC_S.js",
     "name": "entry/app",
     "src": ".svelte-kit/generated/client-optimized/app.js",
     "isEntry": true,
     "imports": [
       "_preload-helper.D6kgxu3v.js",
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js"
+      "_index.KmTeEdc_.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/client-optimized/nodes/0.js",
@@ -19,47 +19,62 @@
       ".svelte-kit/generated/client-optimized/nodes/6.js",
       ".svelte-kit/generated/client-optimized/nodes/7.js",
       ".svelte-kit/generated/client-optimized/nodes/8.js",
-      ".svelte-kit/generated/client-optimized/nodes/9.js"
+      ".svelte-kit/generated/client-optimized/nodes/9.js",
+      ".svelte-kit/generated/client-optimized/nodes/10.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/0.js": {
-    "file": "_app/immutable/nodes/0.DayZtL_v.js",
+    "file": "_app/immutable/nodes/0.BW6AmXrK.js",
     "name": "nodes/0",
     "src": ".svelte-kit/generated/client-optimized/nodes/0.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
+      "_index.KmTeEdc_.js",
       "_stores.DM0AiXp9.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/1.js": {
-    "file": "_app/immutable/nodes/1.DhjMtZcs.js",
+    "file": "_app/immutable/nodes/1.CiLADQRm.js",
     "name": "nodes/1",
     "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_entry.Bydg3Dmk.js"
+      "_index.KmTeEdc_.js",
+      "_spot-types.wRKxasCO.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/10.js": {
+    "file": "_app/immutable/nodes/10.CkFJz4f8.js",
+    "name": "nodes/10",
+    "src": ".svelte-kit/generated/client-optimized/nodes/10.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.vKpMcqOq.js",
+      "_index.KmTeEdc_.js",
+      "_UserCredentials.CRklw5xA.js",
+      "__commonjsHelpers.Cpj98o6Y.js",
+      "_spot-types.wRKxasCO.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/2.js": {
-    "file": "_app/immutable/nodes/2.BJgw3bFJ.js",
+    "file": "_app/immutable/nodes/2.D1gUB2IX.js",
     "name": "nodes/2",
     "src": ".svelte-kit/generated/client-optimized/nodes/2.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
+      "_index.KmTeEdc_.js",
       "_stores.DM0AiXp9.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/3.js": {
-    "file": "_app/immutable/nodes/3.qdrEQblG.js",
+    "file": "_app/immutable/nodes/3.Ar3l-VTg.js",
     "name": "nodes/3",
     "src": ".svelte-kit/generated/client-optimized/nodes/3.js",
     "isEntry": true,
@@ -67,175 +82,169 @@
     "imports": [
       "_preload-helper.D6kgxu3v.js",
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_Card.B9OaVomy.js",
+      "_index.KmTeEdc_.js",
+      "_Card.BaVCKnc9.js",
       "_stores.DM0AiXp9.js",
-      "_SpotList.DkxgxkAh.js",
-      "_forms.D75PdG6S.js",
-      "_LeafletMap.B5pGijcS.js"
+      "_SpotList.BSSOA1V4.js",
+      "_forms.CmeSdVas.js",
+      "_LeafletMap.XbDgL4B5.js"
     ],
     "dynamicImports": [
-      "_LeafletMap.B5pGijcS.js"
+      "_LeafletMap.XbDgL4B5.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/4.js": {
-    "file": "_app/immutable/nodes/4.BgSFuQrg.js",
+    "file": "_app/immutable/nodes/4.Bo5ShogZ.js",
     "name": "nodes/4",
     "src": ".svelte-kit/generated/client-optimized/nodes/4.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_forms.D75PdG6S.js",
+      "_index.KmTeEdc_.js",
+      "_forms.CmeSdVas.js",
       "_stores.DM0AiXp9.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/5.js": {
-    "file": "_app/immutable/nodes/5.B6vLf2RH.js",
+    "file": "_app/immutable/nodes/5.NY-yVRoB.js",
     "name": "nodes/5",
     "src": ".svelte-kit/generated/client-optimized/nodes/5.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_UserCredentials.Dedq44ie.js"
+      "_index.KmTeEdc_.js",
+      "_stores.DM0AiXp9.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/6.js": {
-    "file": "_app/immutable/nodes/6.BsX8Am0J.js",
+    "file": "_app/immutable/nodes/6.DNiUkKR4.js",
     "name": "nodes/6",
     "src": ".svelte-kit/generated/client-optimized/nodes/6.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_entry.Bydg3Dmk.js",
-      "_stores.DM0AiXp9.js"
+      "_index.KmTeEdc_.js",
+      "_UserCredentials.CRklw5xA.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/7.js": {
-    "file": "_app/immutable/nodes/7.Dbtck0fz.js",
+    "file": "_app/immutable/nodes/7.CwT8W5mn.js",
     "name": "nodes/7",
     "src": ".svelte-kit/generated/client-optimized/nodes/7.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_preload-helper.D6kgxu3v.js",
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_Card.B9OaVomy.js",
-      "_stores.DM0AiXp9.js",
-      "_LeafletMap.B5pGijcS.js"
-    ],
-    "dynamicImports": [
-      "_LeafletMap.B5pGijcS.js"
+      "_index.KmTeEdc_.js",
+      "_spot-types.wRKxasCO.js",
+      "_stores.DM0AiXp9.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/8.js": {
-    "file": "_app/immutable/nodes/8.B8KFxG38.js",
+    "file": "_app/immutable/nodes/8.R66Y9G5o.js",
     "name": "nodes/8",
     "src": ".svelte-kit/generated/client-optimized/nodes/8.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
+      "_preload-helper.D6kgxu3v.js",
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
+      "_index.KmTeEdc_.js",
+      "_Card.BaVCKnc9.js",
       "_stores.DM0AiXp9.js",
-      "_Card.B9OaVomy.js",
-      "_SpotList.DkxgxkAh.js"
+      "_LeafletMap.XbDgL4B5.js"
     ],
-    "css": [
-      "_app/immutable/assets/8.Cr4CiJpe.css"
+    "dynamicImports": [
+      "_LeafletMap.XbDgL4B5.js"
     ]
   },
   ".svelte-kit/generated/client-optimized/nodes/9.js": {
-    "file": "_app/immutable/nodes/9.BWSKHcS2.js",
+    "file": "_app/immutable/nodes/9.C56hfB-5.js",
     "name": "nodes/9",
     "src": ".svelte-kit/generated/client-optimized/nodes/9.js",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_UserCredentials.Dedq44ie.js",
-      "__commonjsHelpers.Cpj98o6Y.js",
-      "_entry.Bydg3Dmk.js"
+      "_index.KmTeEdc_.js",
+      "_stores.DM0AiXp9.js",
+      "_Card.BaVCKnc9.js",
+      "_SpotList.BSSOA1V4.js"
+    ],
+    "css": [
+      "_app/immutable/assets/9.Cr4CiJpe.css"
     ]
   },
-  "_Card.B9OaVomy.js": {
-    "file": "_app/immutable/chunks/Card.B9OaVomy.js",
+  "_Card.BaVCKnc9.js": {
+    "file": "_app/immutable/chunks/Card.BaVCKnc9.js",
     "name": "Card",
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js"
+      "_index.KmTeEdc_.js"
     ]
   },
-  "_LeafletMap.!~{00n}~.js": {
+  "_LeafletMap.!~{00o}~.js": {
     "file": "_app/immutable/assets/LeafletMap.HupOsEJb.css",
-    "src": "_LeafletMap.!~{00n}~.js"
+    "src": "_LeafletMap.!~{00o}~.js"
   },
-  "_LeafletMap.B5pGijcS.js": {
-    "file": "_app/immutable/chunks/LeafletMap.B5pGijcS.js",
+  "_LeafletMap.XbDgL4B5.js": {
+    "file": "_app/immutable/chunks/LeafletMap.XbDgL4B5.js",
     "name": "LeafletMap",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper.D6kgxu3v.js",
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
+      "_index.KmTeEdc_.js",
       "__commonjsHelpers.Cpj98o6Y.js"
     ],
     "css": [
       "_app/immutable/assets/LeafletMap.HupOsEJb.css"
     ]
   },
-  "_SpotList.DkxgxkAh.js": {
-    "file": "_app/immutable/chunks/SpotList.DkxgxkAh.js",
+  "_SpotList.BSSOA1V4.js": {
+    "file": "_app/immutable/chunks/SpotList.BSSOA1V4.js",
     "name": "SpotList",
     "imports": [
+      "_preload-helper.D6kgxu3v.js",
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js",
-      "_forms.D75PdG6S.js"
+      "_index.KmTeEdc_.js",
+      "_forms.CmeSdVas.js"
+    ],
+    "dynamicImports": [
+      "_spot-types.wRKxasCO.js"
     ]
   },
-  "_UserCredentials.Dedq44ie.js": {
-    "file": "_app/immutable/chunks/UserCredentials.Dedq44ie.js",
+  "_UserCredentials.CRklw5xA.js": {
+    "file": "_app/immutable/chunks/UserCredentials.CRklw5xA.js",
     "name": "UserCredentials",
     "imports": [
       "_scheduler.vKpMcqOq.js",
-      "_index.D9X9x838.js"
+      "_index.KmTeEdc_.js"
     ]
   },
   "__commonjsHelpers.Cpj98o6Y.js": {
     "file": "_app/immutable/chunks/_commonjsHelpers.Cpj98o6Y.js",
     "name": "_commonjsHelpers"
   },
-  "_entry.Bydg3Dmk.js": {
-    "file": "_app/immutable/chunks/entry.Bydg3Dmk.js",
-    "name": "entry",
-    "imports": [
-      "_scheduler.vKpMcqOq.js",
-      "_index.Dj5UrllC.js"
-    ]
-  },
-  "_forms.D75PdG6S.js": {
-    "file": "_app/immutable/chunks/forms.D75PdG6S.js",
+  "_forms.CmeSdVas.js": {
+    "file": "_app/immutable/chunks/forms.CmeSdVas.js",
     "name": "forms",
     "imports": [
-      "_entry.Bydg3Dmk.js"
+      "_spot-types.wRKxasCO.js"
     ]
   },
-  "_index.D9X9x838.js": {
-    "file": "_app/immutable/chunks/index.D9X9x838.js",
+  "_index.Dj5UrllC.js": {
+    "file": "_app/immutable/chunks/index.Dj5UrllC.js",
     "name": "index",
     "imports": [
       "_scheduler.vKpMcqOq.js"
     ]
   },
-  "_index.Dj5UrllC.js": {
-    "file": "_app/immutable/chunks/index.Dj5UrllC.js",
+  "_index.KmTeEdc_.js": {
+    "file": "_app/immutable/chunks/index.KmTeEdc_.js",
     "name": "index",
     "imports": [
       "_scheduler.vKpMcqOq.js"
@@ -249,6 +258,15 @@
     "file": "_app/immutable/chunks/scheduler.vKpMcqOq.js",
     "name": "scheduler"
   },
+  "_spot-types.wRKxasCO.js": {
+    "file": "_app/immutable/chunks/spot-types.wRKxasCO.js",
+    "name": "spot-types",
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.vKpMcqOq.js",
+      "_index.Dj5UrllC.js"
+    ]
+  },
   "_stores.DM0AiXp9.js": {
     "file": "_app/immutable/chunks/stores.DM0AiXp9.js",
     "name": "stores",
@@ -257,12 +275,12 @@
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
-    "file": "_app/immutable/entry/start.BWWuHuXH.js",
+    "file": "_app/immutable/entry/start.BqPjKvqz.js",
     "name": "entry/start",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js",
     "isEntry": true,
     "imports": [
-      "_entry.Bydg3Dmk.js"
+      "_spot-types.wRKxasCO.js"
     ]
   }
 }

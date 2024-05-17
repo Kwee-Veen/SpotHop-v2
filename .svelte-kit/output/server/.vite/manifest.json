@@ -8,13 +8,6 @@
       "_internal.js"
     ]
   },
-  "_Card.js": {
-    "file": "chunks/Card.js",
-    "name": "Card",
-    "imports": [
-      "_ssr.js"
-    ]
-  },
   "_LeafletMap.js": {
     "file": "chunks/LeafletMap.js",
     "name": "LeafletMap",
@@ -31,6 +24,9 @@
     "imports": [
       "_ssr.js",
       "_client.js"
+    ],
+    "dynamicImports": [
+      "_spot-types.js"
     ]
   },
   "_UserCredentials.js": {
@@ -72,6 +68,10 @@
       "src/hooks.server.ts"
     ]
   },
+  "_private.js": {
+    "file": "chunks/private.js",
+    "name": "private"
+  },
   "_prod-ssr.js": {
     "file": "chunks/prod-ssr.js",
     "name": "prod-ssr"
@@ -81,6 +81,14 @@
     "name": "spot-service",
     "imports": [
       "_spot.js"
+    ]
+  },
+  "_spot-types.js": {
+    "file": "chunks/spot-types.js",
+    "name": "spot-types",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ssr.js"
     ]
   },
   "_spot.js": {
@@ -125,7 +133,10 @@
     "file": "chunks/hooks.server.js",
     "name": "hooks.server",
     "src": "src/hooks.server.ts",
-    "isDynamicEntry": true
+    "isDynamicEntry": true,
+    "imports": [
+      "_private.js"
+    ]
   },
   "src/routes/+layout.server.ts": {
     "file": "entries/pages/_layout.server.ts.js",
@@ -170,7 +181,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_Card.js",
+      "_spot-types.js",
       "_stores.js",
       "_client.js",
       "_SpotList.js",
@@ -195,6 +206,28 @@
     "imports": [
       "_ssr.js",
       "_client.js",
+      "_stores.js"
+    ]
+  },
+  "src/routes/image/[id]/+page.server.ts": {
+    "file": "entries/pages/image/_id_/_page.server.ts.js",
+    "name": "entries/pages/image/_id_/_page.server.ts",
+    "src": "src/routes/image/[id]/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_spot-service.js",
+      "_index.js",
+      "_spot.js",
+      "_private.js"
+    ]
+  },
+  "src/routes/image/[id]/+page.svelte": {
+    "file": "entries/pages/image/_id_/_page.svelte.js",
+    "name": "entries/pages/image/_id_/_page.svelte",
+    "src": "src/routes/image/[id]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
       "_stores.js"
     ]
   },
@@ -252,7 +285,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_Card.js",
+      "_spot-types.js",
       "_stores.js",
       "_LeafletMap.js"
     ]
@@ -281,7 +314,7 @@
     "imports": [
       "_ssr.js",
       "_stores.js",
-      "_Card.js",
+      "_spot-types.js",
       "_SpotList.js"
     ],
     "css": [

@@ -1,5 +1,5 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/ssr.js";
-import { C as Card } from "../../../chunks/Card.js";
+import { C as Card } from "../../../chunks/spot-types.js";
 import { s as subTitle } from "../../../chunks/stores.js";
 import { L as LeafletMap } from "../../../chunks/LeafletMap.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

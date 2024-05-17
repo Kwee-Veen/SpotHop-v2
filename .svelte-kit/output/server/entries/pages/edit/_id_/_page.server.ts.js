@@ -4,9 +4,7 @@ const load = async ({ cookies, params }) => {
   const cookieStr = cookies.get("spot-user");
   if (cookieStr) {
     const id = encodeURI(params.id);
-    console.log("stored id: " + id);
     const spot = await spotService.getSpotById(id);
-    console.log(spot);
     return { spot };
   }
 };

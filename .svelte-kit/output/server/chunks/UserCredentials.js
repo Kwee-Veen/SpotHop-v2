@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as add_attribute } from "./ssr.js";
+import { c as create_ssr_component, a as add_attribute } from "./ssr.js";
 const UserCredentials = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { email = "" } = $$props;
   let { password = "" } = $$props;

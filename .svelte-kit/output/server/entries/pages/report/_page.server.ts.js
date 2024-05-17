@@ -26,6 +26,16 @@ const actions = {
       redirect(301, "/edit/" + id);
     }
     return;
+  },
+  image: async ({ request, cookies }) => {
+    const cookieStr = cookies.get("spot-user");
+    if (cookieStr) {
+      const form = await request.formData();
+      const id = form.get("spotImageId");
+      console.log("Editing images of spot: " + id);
+      redirect(301, "/image/" + id);
+    }
+    return;
   }
 };
 export {

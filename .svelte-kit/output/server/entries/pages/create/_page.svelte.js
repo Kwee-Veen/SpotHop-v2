@@ -1,5 +1,5 @@
-import { c as create_ssr_component, b as each, d as add_attribute, e as escape, v as validate_component } from "../../../chunks/ssr.js";
-import { C as Card } from "../../../chunks/Card.js";
+import { c as create_ssr_component, b as each, a as add_attribute, e as escape, v as validate_component } from "../../../chunks/ssr.js";
+import { C as Card } from "../../../chunks/spot-types.js";
 import { s as subTitle } from "../../../chunks/stores.js";
 import "devalue";
 import "../../../chunks/client.js";

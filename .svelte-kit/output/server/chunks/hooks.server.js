@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const db = "mongodb://localhost/spothop";
+import { e as db } from "./private.js";
 const mongoConnection = {
   isConnected: 0
 };

@@ -1,10 +1,13 @@
-import * as server from '../entries/pages/report/_page.server.ts.js';
+import * as universal from '../entries/pages/maps/_page.ts.js';
+import * as server from '../entries/pages/maps/_page.server.ts.js';
 
 export const index = 8;
 let component_cache;
-export const component = async () => component_cache ??= (await import('../entries/pages/report/_page.svelte.js')).default;
+export const component = async () => component_cache ??= (await import('../entries/pages/maps/_page.svelte.js')).default;
+export { universal };
+export const universal_id = "src/routes/maps/+page.ts";
 export { server };
-export const server_id = "src/routes/report/+page.server.ts";
-export const imports = ["_app/immutable/nodes/8.B8KFxG38.js","_app/immutable/chunks/scheduler.vKpMcqOq.js","_app/immutable/chunks/index.D9X9x838.js","_app/immutable/chunks/stores.DM0AiXp9.js","_app/immutable/chunks/index.Dj5UrllC.js","_app/immutable/chunks/Card.B9OaVomy.js","_app/immutable/chunks/SpotList.DkxgxkAh.js","_app/immutable/chunks/forms.D75PdG6S.js","_app/immutable/chunks/entry.Bydg3Dmk.js"];
-export const stylesheets = ["_app/immutable/assets/8.Cr4CiJpe.css"];
+export const server_id = "src/routes/maps/+page.server.ts";
+export const imports = ["_app/immutable/nodes/8.R66Y9G5o.js","_app/immutable/chunks/preload-helper.D6kgxu3v.js","_app/immutable/chunks/scheduler.vKpMcqOq.js","_app/immutable/chunks/index.KmTeEdc_.js","_app/immutable/chunks/Card.BaVCKnc9.js","_app/immutable/chunks/stores.DM0AiXp9.js","_app/immutable/chunks/index.Dj5UrllC.js","_app/immutable/chunks/LeafletMap.XbDgL4B5.js","_app/immutable/chunks/_commonjsHelpers.Cpj98o6Y.js"];
+export const stylesheets = ["_app/immutable/assets/LeafletMap.HupOsEJb.css"];
 export const fonts = [];

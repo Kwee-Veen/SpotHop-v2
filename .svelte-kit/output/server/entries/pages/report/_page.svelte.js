@@ -1,6 +1,6 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/ssr.js";
 import { s as subTitle } from "../../../chunks/stores.js";
-import { C as Card } from "../../../chunks/Card.js";
+import { C as Card } from "../../../chunks/spot-types.js";
 import "echarts";
 import { S as SpotList } from "../../../chunks/SpotList.js";
 const css$2 = {

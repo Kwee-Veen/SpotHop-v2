@@ -8,9 +8,7 @@ export const load = async ({ cookies, params }: Parameters<PageServerLoad>[0]) =
   const cookieStr = cookies.get("spot-user") as string;
   if (cookieStr) {
     const id = encodeURI(params.id);
-    console.log("stored id: " + id);
     const spot = await spotService.getSpotById(id);
-    console.log(spot);
     return { spot: spot }
   }
 };

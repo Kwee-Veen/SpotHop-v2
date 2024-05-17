@@ -1,4 +1,4 @@
-import { c as create_ssr_component, e as escape, d as add_attribute } from "../../../../chunks/ssr.js";
+import { c as create_ssr_component, e as escape, a as add_attribute } from "../../../../chunks/ssr.js";
 import "devalue";
 import "../../../../chunks/client.js";
 import { s as subTitle } from "../../../../chunks/stores.js";
