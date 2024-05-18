@@ -33,6 +33,7 @@
 		"src/routes/+layout.server.ts"
 	],
 	"/signup": [
+		"src/routes/signup/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	]
 }

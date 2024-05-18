@@ -78,10 +78,7 @@
   },
   "_spot-service.js": {
     "file": "chunks/spot-service.js",
-    "name": "spot-service",
-    "imports": [
-      "_spot.js"
-    ]
+    "name": "spot-service"
   },
   "_spot-types.js": {
     "file": "chunks/spot-types.js",
@@ -90,10 +87,6 @@
     "imports": [
       "_ssr.js"
     ]
-  },
-  "_spot.js": {
-    "file": "chunks/spot.js",
-    "name": "spot"
   },
   "_ssr.js": {
     "file": "chunks/ssr.js",
@@ -217,7 +210,6 @@
     "imports": [
       "_spot-service.js",
       "_index.js",
-      "_spot.js",
       "_private.js"
     ]
   },
@@ -228,6 +220,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
+      "_client.js",
       "_stores.js"
     ]
   },
@@ -303,7 +296,8 @@
     "isEntry": true,
     "imports": [
       "_spot-service.js",
-      "_index.js"
+      "_index.js",
+      "_client.js"
     ]
   },
   "src/routes/report/+page.svelte": {
@@ -321,6 +315,16 @@
       "_app/immutable/assets/_page.Cr4CiJpe.css"
     ]
   },
+  "src/routes/signup/+page.server.ts": {
+    "file": "entries/pages/signup/_page.server.ts.js",
+    "name": "entries/pages/signup/_page.server.ts",
+    "src": "src/routes/signup/+page.server.ts",
+    "isEntry": true,
+    "imports": [
+      "_client.js",
+      "_spot-service.js"
+    ]
+  },
   "src/routes/signup/+page.svelte": {
     "file": "entries/pages/signup/_page.svelte.js",
     "name": "entries/pages/signup/_page.svelte",
@@ -329,7 +333,6 @@
     "imports": [
       "_ssr.js",
       "_UserCredentials.js",
-      "_spot.js",
       "_client.js"
     ]
   }

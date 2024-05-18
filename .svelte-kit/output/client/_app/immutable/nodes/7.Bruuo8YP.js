@@ -1,0 +1,1 @@
+import{s as e}from"../chunks/scheduler.c2vh5_Kn.js";import{S as s,i as n}from"../chunks/index.DYvIg-GN.js";import{g as r}from"../chunks/spot-types.B5EZbF7N.js";import{c as a}from"../chunks/stores.B-gPtvMu.js";function i(o){return a.set({name:"",_id:"",token:""}),r("/"),[]}class u extends s{constructor(t){super(),n(this,t,i,null,e,{})}}export{u as component};

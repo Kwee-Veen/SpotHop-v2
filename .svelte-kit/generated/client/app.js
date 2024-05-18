@@ -25,7 +25,7 @@ export const dictionary = {
 		"/logout": [~7],
 		"/maps": [~8],
 		"/report": [~9],
-		"/signup": [10]
+		"/signup": [~10]
 	};
 
 export const hooks = {

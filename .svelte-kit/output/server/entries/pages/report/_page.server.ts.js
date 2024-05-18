@@ -1,5 +1,6 @@
 import { s as spotService } from "../../../chunks/spot-service.js";
 import { r as redirect } from "../../../chunks/index.js";
+import "../../../chunks/client.js";
 const load = async ({}) => {
   return {
     spots: await spotService.getSpots(),
@@ -32,7 +33,8 @@ const actions = {
     if (cookieStr) {
       const form = await request.formData();
       const id = form.get("spotImageId");
-      console.log("Editing images of spot: " + id);
+      const spot = await spotService.getSpotById(id);
+      console.log("Editing images of spot: " + spot?.name);
       redirect(301, "/image/" + id);
     }
     return;

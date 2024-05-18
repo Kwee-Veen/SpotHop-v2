@@ -1,6 +1,6 @@
 import { c as create_ssr_component, a as add_attribute, v as validate_component } from "../../../chunks/ssr.js";
 import { U as UserCredentials } from "../../../chunks/UserCredentials.js";
-import "../../../chunks/spot.js";
+import "devalue";
 import "../../../chunks/client.js";
 const UserDetails = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { firstName = "" } = $$props;
@@ -22,7 +22,7 @@ const SignupForm = create_ssr_component(($$result, $$props, $$bindings, slots) =
   do {
     $$settled = true;
     $$result.head = previous_head;
-    $$rendered = `${``} <form>${validate_component(UserDetails, "UserDetails").$$render(
+    $$rendered = `<form method="POST" action="?/signup">${validate_component(UserDetails, "UserDetails").$$render(
       $$result,
       { firstName, lastName },
       {

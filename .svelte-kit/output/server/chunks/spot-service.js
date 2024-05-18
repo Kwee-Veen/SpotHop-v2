@@ -1,4 +1,13 @@
-import { U as UserMongoose, S as SpotMongoose } from "./spot.js";
+import mongoose, { Schema, model } from "mongoose";
+const { models: models$1 } = mongoose;
+const userSchema = new Schema({
+  firstName: String,
+  lastName: String,
+  email: String,
+  password: String,
+  admin: Boolean
+});
+const UserMongoose = models$1["User"] || model("User", userSchema);
 const userStore = {
   async getAllUsers() {
     const users = await UserMongoose.find().lean();
@@ -78,6 +87,20 @@ const userStore = {
     }
   }
 };
+const { models } = mongoose;
+const spotSchema = new Schema({
+  name: String,
+  description: String,
+  img: [],
+  category: String,
+  latitude: Number,
+  longitude: Number,
+  userid: {
+    type: Schema.Types.ObjectId,
+    ref: "User"
+  }
+});
+const SpotMongoose = models["Spot"] || model("Spot", spotSchema);
 const spotStore = {
   async getAllSpots() {
     const spots = await SpotMongoose.find().lean();
@@ -290,7 +313,7 @@ const spotService = {
   async signup(user) {
     try {
       const newUser = await userStore.addUser(user);
-      return !!newUser;
+      return !newUser;
     } catch (error) {
       console.log(error);
       return false;
@@ -389,5 +412,6 @@ const spotService = {
   }
 };
 export {
+  spotStore as a,
   spotService as s
 };
