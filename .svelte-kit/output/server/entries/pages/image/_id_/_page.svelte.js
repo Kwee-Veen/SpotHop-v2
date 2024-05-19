@@ -41,7 +41,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       {
         height: 44,
         zoom: 7,
-        activeLayer: "Terrain",
+        activeLayer: "Transportation",
         data,
         this: map
       },

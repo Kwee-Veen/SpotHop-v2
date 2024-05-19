@@ -20,7 +20,6 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         height: 75,
         data,
         id: "firstMap",
-        activeLayer: "Transportation",
         zoom: 7,
         this: map1
       },
@@ -36,6 +35,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       {
         height: 75,
         data,
+        activeLayer: "Transportation",
         id: "secondMap",
         this: map2
       },

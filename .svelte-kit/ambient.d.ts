@@ -28,11 +28,11 @@
 declare module '$env/static/private' {
 	export const COOKIE_NAME: string;
 	export const COOKIE_PASSWORD: string;
+	export const db: string;
 	export const cloudinary_name: string;
 	export const cloudinary_key: string;
 	export const cloudinary_secret: string;
 	export const cloudinary_preset: string;
-	export const db: string;
 	export const ALLUSERSPROFILE: string;
 	export const APPDATA: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
@@ -146,11 +146,11 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		COOKIE_NAME: string;
 		COOKIE_PASSWORD: string;
+		db: string;
 		cloudinary_name: string;
 		cloudinary_key: string;
 		cloudinary_secret: string;
 		cloudinary_preset: string;
-		db: string;
 		ALLUSERSPROFILE: string;
 		APPDATA: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
