@@ -8,8 +8,6 @@ const load = async ({}) => {
   };
 };
 const actions = {
-  // validate user input (strings only)
-  // Use right hand side for reference
   create: async ({ request, cookies }) => {
     const cookieStr = cookies.get("spot-user");
     if (cookieStr) {

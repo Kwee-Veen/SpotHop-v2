@@ -8,6 +8,16 @@
       "_internal.js"
     ]
   },
+  "_Chart.js": {
+    "file": "chunks/Chart.js",
+    "name": "Chart",
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Chart.BnxTEXOb.css"
+    ]
+  },
   "_LeafletMap.js": {
     "file": "chunks/LeafletMap.js",
     "name": "LeafletMap",
@@ -15,7 +25,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/LeafletMap.HupOsEJb.css"
+      "_app/immutable/assets/leaflet.HupOsEJb.css"
     ]
   },
   "_SpotList.js": {
@@ -67,6 +77,10 @@
     "dynamicImports": [
       "src/hooks.server.ts"
     ]
+  },
+  "_leaflet.js": {
+    "file": "_app/immutable/assets/leaflet.HupOsEJb.css",
+    "src": "_leaflet.js"
   },
   "_private.js": {
     "file": "chunks/private.js",
@@ -169,8 +183,10 @@
       "_ssr.js",
       "_SpotList.js",
       "_spot-types.js",
-      "_client.js",
-      "_LeafletMap.js"
+      "_client.js"
+    ],
+    "css": [
+      "_app/immutable/assets/leaflet.HupOsEJb.css"
     ]
   },
   "src/routes/edit/[id]/+page.server.ts": {
@@ -213,7 +229,12 @@
     "imports": [
       "_ssr.js",
       "_client.js",
-      "_spot-types.js"
+      "_spot-types.js",
+      "_Chart.js",
+      "_LeafletMap.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.D0Hb4heR.css"
     ]
   },
   "src/routes/login/+page.server.ts": {
@@ -287,8 +308,7 @@
     "isEntry": true,
     "imports": [
       "_spot-service.js",
-      "_index.js",
-      "_client.js"
+      "_index.js"
     ]
   },
   "src/routes/report/+page.svelte": {
@@ -299,10 +319,11 @@
     "imports": [
       "_ssr.js",
       "_spot-types.js",
-      "_SpotList.js"
+      "_SpotList.js",
+      "_Chart.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.Cr4CiJpe.css"
+      "_app/immutable/assets/_page.DQXiSSqs.css"
     ]
   },
   "src/routes/signup/+page.server.ts": {

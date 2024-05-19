@@ -1,6 +1,5 @@
 import { s as spotService } from "../../../chunks/spot-service.js";
 import { r as redirect } from "../../../chunks/index.js";
-import "../../../chunks/client.js";
 const load = async ({}) => {
   return {
     spots: await spotService.getSpots(),

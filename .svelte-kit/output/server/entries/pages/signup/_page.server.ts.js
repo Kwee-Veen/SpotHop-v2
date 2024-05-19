@@ -26,15 +26,21 @@ const actions = {
     const nonBlacklistCharsEmail = validator.blacklist(email, `^[p{L}p{Zs}]+$`);
     if (nonBlacklistCharsEmail)
       email = nonBlacklistCharsEmail;
-    console.log("Error while performing email character blacklisting");
+    else {
+      console.log("Error while performing email character blacklisting");
+    }
     const escapedCharsEmail = validator.escape(email);
     if (escapedCharsEmail)
       email = escapedCharsEmail;
-    console.log("Error while performing email character escaping");
+    else {
+      console.log("Error while performing email character escaping");
+    }
     const normalizedEmail = validator.normalizeEmail(email);
     if (normalizedEmail)
       email = normalizedEmail;
-    console.log("Error while performing email character normalisation");
+    else {
+      console.log("Error while performing email character normalisation");
+    }
     if (validator.isEmail(email))
       user.email = email;
     else {
@@ -61,7 +67,7 @@ const actions = {
         console.log("Did not create new user because reasons");
         return;
       } else {
-        console.log("Successfully created new user " + user.firstName + ", " + user.lastName + ", " + user.email + ", " + user.hash + ", ");
+        console.log("Successfully created new user " + user.firstName + ", " + user.lastName + ", " + user.email + ", " + user.hash);
         redirect(301, "/login");
       }
     } else

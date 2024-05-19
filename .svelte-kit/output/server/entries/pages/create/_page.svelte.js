@@ -1,9 +1,10 @@
-import { c as create_ssr_component, b as each, a as add_attribute, e as escape, v as validate_component } from "../../../chunks/ssr.js";
+import { c as create_ssr_component, d as each, a as add_attribute, e as escape, v as validate_component } from "../../../chunks/ssr.js";
 import { C as Card, S as SpotList } from "../../../chunks/SpotList.js";
 import { s as subTitle } from "../../../chunks/spot-types.js";
 import "devalue";
 import "../../../chunks/client.js";
-import { L as LeafletMap } from "../../../chunks/LeafletMap.js";
+/* empty css                      */
+import "leaflet";
 const Category = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const categoryList = [
     "Site",
@@ -65,48 +66,20 @@ const CreateSpotForm = create_ssr_component(($$result, $$props, $$bindings, slot
         }
       },
       {}
-    )}</div></div> <div class="field" data-svelte-h="svelte-ej73g9"><input id="description" class="input is-success" type="text" placeholder="Enter description" name="description"></div> <br> <div class="text has-text-centered" data-svelte-h="svelte-zikyt2"><button class="button is-danger is-rounded has-text-weight-bold is-size-5">Create Spot</button></div> <br> <div class="columns is-mobile is-centered"><div class="column is-narrow"><div class="box has-background-warning-light"><div class="content has-text-centered is-italic">${escape(message)}</div></div></div></div></form></div>`;
+    )}</div></div> <div class="field" data-svelte-h="svelte-ej73g9"><input id="description" class="input is-success" type="text" placeholder="Enter description" name="description"></div> <br> <div class="text has-text-centered" data-svelte-h="svelte-ypixef"><button class="button is-warning is-rounded has-text-weight-bold is-size-5">Create Spot</button></div> <br> <div class="columns is-mobile is-centered"><div class="column is-narrow"><div class="box has-background-warning-light"><div class="content has-text-centered is-italic">${escape(message)}</div></div></div></div></form></div>`;
   } while (!$$settled);
   return $$rendered;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
-  let map;
   subTitle.set("Create a Spot");
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
-  let $$settled;
-  let $$rendered;
-  let previous_head = $$result.head;
-  do {
-    $$settled = true;
-    $$result.head = previous_head;
-    $$rendered = `${validate_component(Card, "Card").$$render($$result, {}, {}, {
-      default: () => {
-        return `<div class="columns is-mobile is-centered"><div class="column is-6">${validate_component(LeafletMap, "LeafletMap").$$render(
-          $$result,
-          {
-            height: 43,
-            activeLayer: "Terrain",
-            data,
-            this: map
-          },
-          {
-            this: ($$value) => {
-              map = $$value;
-              $$settled = false;
-            }
-          },
-          {}
-        )}</div> <div class="column is-6">${validate_component(CreateSpotForm, "CreateSpotForm").$$render($$result, {}, {}, {})}</div></div>`;
-      }
-    })} ${validate_component(Card, "Card").$$render($$result, {}, {}, {
-      default: () => {
-        return `${validate_component(SpotList, "SpotList").$$render($$result, { spots: data.spots }, {}, {})}`;
-      }
-    })} `;
-  } while (!$$settled);
-  return $$rendered;
+  return `<div class="columns is-mobile is-centered"><div class="column is-8"><div class="box has-background-warning"> ${validate_component(CreateSpotForm, "CreateSpotForm").$$render($$result, {}, {}, {})}</div></div></div> ${validate_component(Card, "Card").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(SpotList, "SpotList").$$render($$result, { spots: data.spots }, {}, {})}`;
+    }
+  })} `;
 });
 export {
   Page as default
