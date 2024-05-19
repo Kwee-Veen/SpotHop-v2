@@ -1,9 +1,8 @@
 import { c as create_ssr_component, b as each, a as add_attribute, e as escape, v as validate_component } from "../../../chunks/ssr.js";
-import { C as Card } from "../../../chunks/spot-types.js";
-import { s as subTitle } from "../../../chunks/stores.js";
+import { C as Card, S as SpotList } from "../../../chunks/SpotList.js";
+import { s as subTitle } from "../../../chunks/spot-types.js";
 import "devalue";
 import "../../../chunks/client.js";
-import { S as SpotList } from "../../../chunks/SpotList.js";
 import { L as LeafletMap } from "../../../chunks/LeafletMap.js";
 const Category = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const categoryList = [
@@ -82,24 +81,28 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   do {
     $$settled = true;
     $$result.head = previous_head;
-    $$rendered = `<div class="columns is-mobile is-centered"><div class="column is-6"><box class="box has-background-danger-light">${validate_component(CreateSpotForm, "CreateSpotForm").$$render($$result, {}, {}, {})}</box></div> <div class="column is-6"><box class="box">${validate_component(LeafletMap, "LeafletMap").$$render(
-      $$result,
-      {
-        height: 43,
-        activeLayer: "Terrain",
-        data,
-        this: map
-      },
-      {
-        this: ($$value) => {
-          map = $$value;
-          $$settled = false;
-        }
-      },
-      {}
-    )}</box></div></div> ${validate_component(Card, "Card").$$render($$result, {}, {}, {
+    $$rendered = `${validate_component(Card, "Card").$$render($$result, {}, {}, {
       default: () => {
-        return `<div class="columns is-mobile is-centered" data-svelte-h="svelte-12khktn"><div class="column is-3"><box class="box has-background-white"><h2 class="h2 has-text-centered">Spot List</h2></box></div></div> ${validate_component(SpotList, "SpotList").$$render($$result, { spots: data.spots }, {}, {})}`;
+        return `<div class="columns is-mobile is-centered"><div class="column is-6">${validate_component(LeafletMap, "LeafletMap").$$render(
+          $$result,
+          {
+            height: 43,
+            activeLayer: "Terrain",
+            data,
+            this: map
+          },
+          {
+            this: ($$value) => {
+              map = $$value;
+              $$settled = false;
+            }
+          },
+          {}
+        )}</div> <div class="column is-6">${validate_component(CreateSpotForm, "CreateSpotForm").$$render($$result, {}, {}, {})}</div></div>`;
+      }
+    })} ${validate_component(Card, "Card").$$render($$result, {}, {}, {
+      default: () => {
+        return `${validate_component(SpotList, "SpotList").$$render($$result, { spots: data.spots }, {}, {})}`;
       }
     })} `;
   } while (!$$settled);

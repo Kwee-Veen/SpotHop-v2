@@ -5,7 +5,8 @@ const userSchema = new Schema({
   lastName: String,
   email: String,
   password: String,
-  admin: Boolean
+  admin: Boolean,
+  hash: String
 });
 const UserMongoose = models$1["User"] || model("User", userSchema);
 const userStore = {
@@ -313,7 +314,10 @@ const spotService = {
   async signup(user) {
     try {
       const newUser = await userStore.addUser(user);
-      return !newUser;
+      if (newUser !== null)
+        return true;
+      else
+        return false;
     } catch (error) {
       console.log(error);
       return false;
@@ -413,5 +417,6 @@ const spotService = {
 };
 export {
   spotStore as a,
-  spotService as s
+  spotService as s,
+  userStore as u
 };

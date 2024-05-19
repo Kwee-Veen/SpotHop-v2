@@ -85,19 +85,12 @@
     "name": "spot-types",
     "isDynamicEntry": true,
     "imports": [
-      "_ssr.js"
+      "_index2.js"
     ]
   },
   "_ssr.js": {
     "file": "chunks/ssr.js",
     "name": "ssr"
-  },
-  "_stores.js": {
-    "file": "chunks/stores.js",
-    "name": "stores",
-    "imports": [
-      "_index2.js"
-    ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
@@ -144,7 +137,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_stores.js"
+      "_spot-types.js"
     ]
   },
   "src/routes/+page.svelte": {
@@ -154,7 +147,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_stores.js"
+      "_spot-types.js"
     ]
   },
   "src/routes/create/+page.server.ts": {
@@ -174,10 +167,9 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_spot-types.js",
-      "_stores.js",
-      "_client.js",
       "_SpotList.js",
+      "_spot-types.js",
+      "_client.js",
       "_LeafletMap.js"
     ]
   },
@@ -199,7 +191,7 @@
     "imports": [
       "_ssr.js",
       "_client.js",
-      "_stores.js"
+      "_spot-types.js"
     ]
   },
   "src/routes/image/[id]/+page.server.ts": {
@@ -221,7 +213,7 @@
     "imports": [
       "_ssr.js",
       "_client.js",
-      "_stores.js"
+      "_spot-types.js"
     ]
   },
   "src/routes/login/+page.server.ts": {
@@ -259,7 +251,7 @@
     "imports": [
       "_ssr.js",
       "_client.js",
-      "_stores.js"
+      "_spot-types.js"
     ]
   },
   "src/routes/maps/+page.server.ts": {
@@ -279,7 +271,6 @@
     "imports": [
       "_ssr.js",
       "_spot-types.js",
-      "_stores.js",
       "_LeafletMap.js"
     ]
   },
@@ -307,7 +298,6 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_stores.js",
       "_spot-types.js",
       "_SpotList.js"
     ],
@@ -321,8 +311,8 @@
     "src": "src/routes/signup/+page.server.ts",
     "isEntry": true,
     "imports": [
-      "_client.js",
-      "_spot-service.js"
+      "_spot-service.js",
+      "_index.js"
     ]
   },
   "src/routes/signup/+page.svelte": {

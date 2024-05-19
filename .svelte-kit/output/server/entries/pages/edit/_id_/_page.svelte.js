@@ -1,7 +1,7 @@
 import { c as create_ssr_component, e as escape, a as add_attribute } from "../../../../chunks/ssr.js";
 import "devalue";
 import "../../../../chunks/client.js";
-import { s as subTitle } from "../../../../chunks/stores.js";
+import { s as subTitle } from "../../../../chunks/spot-types.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   subTitle.set("Edit Spot");
   let { data } = $$props;

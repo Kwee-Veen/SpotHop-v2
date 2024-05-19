@@ -1,8 +1,7 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/ssr.js";
-import { s as subTitle } from "../../../chunks/stores.js";
-import { C as Card } from "../../../chunks/spot-types.js";
+import { s as subTitle } from "../../../chunks/spot-types.js";
+import { C as Card, S as SpotList } from "../../../chunks/SpotList.js";
 import "echarts";
-import { S as SpotList } from "../../../chunks/SpotList.js";
 const css$2 = {
   code: ".chart.svelte-sg3l42{height:100%;width:100%}",
   map: '{"version":3,"file":"Chart.svelte","sources":["Chart.svelte"],"sourcesContent":["<script context=\\"module\\">import * as echarts from \\"echarts\\";\\nconst DEFAULT_OPTIONS = {\\n  theme: void 0,\\n  renderer: \\"canvas\\"\\n};\\nexport function chartable(element, echartOptions) {\\n  const { theme, renderer, options } = {\\n    ...DEFAULT_OPTIONS,\\n    ...echartOptions\\n  };\\n  const echartsInstance = echarts.init(element, theme, { renderer });\\n  echartsInstance.setOption(options);\\n  function handleResize() {\\n    echartsInstance.resize();\\n  }\\n  window.addEventListener(\\"resize\\", handleResize);\\n  return {\\n    destroy() {\\n      echartsInstance.dispose();\\n      window.removeEventListener(\\"resize\\", handleResize);\\n    },\\n    update(newOptions) {\\n      echartsInstance.setOption({\\n        ...echartOptions.options,\\n        ...newOptions.options\\n      });\\n    }\\n  };\\n}\\n<\/script>\\n\\n<script>export let options;\\nexport let { theme, renderer } = DEFAULT_OPTIONS;\\n<\/script>\\n\\n<div class=\\"chart\\" use:chartable={{ renderer, theme, options }} />\\n\\n<style>\\n  .chart {\\n    height: 100%;\\n    width: 100%;\\n  }\\n</style>\\n"],"names":[],"mappings":"AAsCE,oBAAO,CACL,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IACT"}'
@@ -52,7 +51,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.data(data);
   return `${validate_component(Card, "Card").$$render($$result, {}, {}, {
     default: () => {
-      return `<div class="columns is-mobile"><div class="column is-half"><div class="card"><div class="columns is-mobile" data-svelte-h="svelte-15exizn"><div class="column is-one-quarter"></div> <div class="column is-one-half"><div class="box has-background-danger-dark"><h4 class="text has-text-centered has-text-white">Spots by Category</h4></div></div> <div class="column is-one-quarter"></div></div> ${validate_component(CategoryChart, "CategoryChart").$$render($$result, { data }, {}, {})}</div></div> <div class="column is-half"><div class="card"><div class="columns is-mobile" data-svelte-h="svelte-17orlel"><div class="column is-one-quarter"></div> <div class="column is-one-half"><div class="box has-background-link-dark"><h4 class="text has-text-centered has-text-white">Spots by User</h4></div></div> <div class="column is-one-quarter"></div></div> ${validate_component(UserChart, "UserChart").$$render($$result, { data }, {}, {})}</div></div></div>`;
+      return `<div class="columns is-mobile"><div class="column is-half"><div class="card"><div class="columns is-mobile is-centered" data-svelte-h="svelte-14ce3ur"><div class="column is-narrow"><div class="box has-background-link-dark pb-2"><h4 class="text has-text-centered has-text-white">Spots by Category</h4></div></div></div> ${validate_component(CategoryChart, "CategoryChart").$$render($$result, { data }, {}, {})}</div></div> <div class="column is-half"><div class="card"><div class="columns is-mobile is-centered" data-svelte-h="svelte-6rn4uq"><div class="column is-narrow"><div class="box has-background-link-dark pb-2"><h4 class="text has-text-centered has-text-white">Spots by User</h4></div></div></div> ${validate_component(UserChart, "UserChart").$$render($$result, { data }, {}, {})}</div></div></div>`;
     }
   })} ${validate_component(Card, "Card").$$render($$result, {}, {}, {
     default: () => {

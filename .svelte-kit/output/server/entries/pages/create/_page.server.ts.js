@@ -1,5 +1,6 @@
 import { s as spotService } from "../../../chunks/spot-service.js";
 import { r as redirect } from "../../../chunks/index.js";
+import validator from "validator";
 const ssr = false;
 const load = async ({}) => {
   return {
@@ -7,6 +8,8 @@ const load = async ({}) => {
   };
 };
 const actions = {
+  // validate user input (strings only)
+  // Use right hand side for reference
   create: async ({ request, cookies }) => {
     const cookieStr = cookies.get("spot-user");
     if (cookieStr) {
@@ -14,14 +17,32 @@ const actions = {
       if (session) {
         const form = await request.formData();
         const spot = {
-          name: form.get("name"),
+          name: "",
           category: form.get("category"),
           latitude: form.get("latitude"),
           longitude: form.get("longitude"),
-          description: form.get("description"),
+          description: "",
           userid: session._id
         };
-        spotService.createSpot(spot);
+        let name = form.get("name");
+        let description = form.get("description");
+        let errorFlag = false;
+        if (validator.isAlphanumeric(name, "en-US", { ignore: " " }))
+          spot.name = name;
+        else {
+          console.log("Name " + name + " has invalid characters. Spot not created.");
+          errorFlag = true;
+        }
+        if (validator.isAlphanumeric(description, "en-US", { ignore: " " }))
+          spot.description = description;
+        else {
+          console.log("Description " + description + " has invalid characters. Spot not created.");
+          errorFlag = true;
+        }
+        if (!errorFlag) {
+          spotService.createSpot(spot);
+        } else
+          console.log("Did not create new spot because reasons");
       }
     }
   },
