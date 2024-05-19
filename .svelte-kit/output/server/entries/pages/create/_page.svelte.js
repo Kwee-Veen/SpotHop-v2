@@ -3,7 +3,6 @@ import { C as Card, S as SpotList } from "../../../chunks/SpotList.js";
 import { s as subTitle } from "../../../chunks/spot-types.js";
 import "devalue";
 import "../../../chunks/client.js";
-/* empty css                      */
 import "leaflet";
 const Category = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const categoryList = [

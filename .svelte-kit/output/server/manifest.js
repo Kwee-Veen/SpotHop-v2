@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["favicon.png","spot-image.png","spotHop_init.jpg","spotHop_init2.jpg","spotHop_init3.jpg","spotHop_init4.jpg"]),
-	mimeTypes: {".png":"image/png",".jpg":"image/jpeg"},
+	assets: new Set(["favicon.png","images/layers-2x.png","images/layers.png","images/marker-icon-2x.png","images/marker-icon.png","images/marker-shadow.png","leaflet.css","spot-image.png","spotHop_init.jpg","spotHop_init2.jpg","spotHop_init3.jpg","spotHop_init4.jpg"]),
+	mimeTypes: {".png":"image/png",".css":"text/css",".jpg":"image/jpeg"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.BDU9_e8S.js","app":"_app/immutable/entry/app.Duf8M18I.js","imports":["_app/immutable/entry/start.BDU9_e8S.js","_app/immutable/chunks/spot-types.D-wtOG_6.js","_app/immutable/chunks/scheduler.Dda-Ubu_.js","_app/immutable/chunks/index.qojeiD3T.js","_app/immutable/entry/app.Duf8M18I.js","_app/immutable/chunks/preload-helper.D6kgxu3v.js","_app/immutable/chunks/scheduler.Dda-Ubu_.js","_app/immutable/chunks/index.BUOivlNn.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.BFkCsVYG.js","app":"_app/immutable/entry/app.Duiw6B1X.js","imports":["_app/immutable/entry/start.BFkCsVYG.js","_app/immutable/chunks/spot-types.F7SilOE-.js","_app/immutable/chunks/scheduler.Dda-Ubu_.js","_app/immutable/chunks/index.qojeiD3T.js","_app/immutable/entry/app.Duiw6B1X.js","_app/immutable/chunks/preload-helper.D6kgxu3v.js","_app/immutable/chunks/scheduler.Dda-Ubu_.js","_app/immutable/chunks/index.BUOivlNn.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

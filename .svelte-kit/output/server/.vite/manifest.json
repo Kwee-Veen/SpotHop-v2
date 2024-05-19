@@ -23,9 +23,6 @@
     "name": "LeafletMap",
     "imports": [
       "_ssr.js"
-    ],
-    "css": [
-      "_app/immutable/assets/leaflet.HupOsEJb.css"
     ]
   },
   "_SpotList.js": {
@@ -77,10 +74,6 @@
     "dynamicImports": [
       "src/hooks.server.ts"
     ]
-  },
-  "_leaflet.js": {
-    "file": "_app/immutable/assets/leaflet.HupOsEJb.css",
-    "src": "_leaflet.js"
   },
   "_private.js": {
     "file": "chunks/private.js",
@@ -184,9 +177,6 @@
       "_SpotList.js",
       "_spot-types.js",
       "_client.js"
-    ],
-    "css": [
-      "_app/immutable/assets/leaflet.HupOsEJb.css"
     ]
   },
   "src/routes/edit/[id]/+page.server.ts": {

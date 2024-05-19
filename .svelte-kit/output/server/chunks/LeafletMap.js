@@ -1,5 +1,4 @@
 import { c as create_ssr_component, a as add_attribute, e as escape } from "./ssr.js";
-/* empty css        */
 import L from "leaflet";
 const LeafletMap = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { id = "home-map-id" } = $$props;
